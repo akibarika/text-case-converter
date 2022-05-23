@@ -1,7 +1,7 @@
 {
   "name": "Case Converter",
   "description": "Just another very handy text tool where you can change among different text cases",
-  "version": "1.01",
+  "version": "1.02",
   "manifest_version": 3,
   "icons": {
     "16": "icons/16.png",

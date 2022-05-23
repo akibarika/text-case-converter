@@ -60,5 +60,5 @@ const toSpinalCaseOrSnakeCase = (str, flag = true) => {
 }
 
 const toCamelCase = (str) => {
-  return str.replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase());
+  return str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase());
 }
