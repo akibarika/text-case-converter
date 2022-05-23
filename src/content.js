@@ -8,7 +8,7 @@ const MENU_ID_SNAKE_CASE = "copy-snake-case";
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   sendResponse({status: 'ok'});
   let selectedText = message.selectedText
-
+  console.log(selectedText)
   switch (message.id) {
     case MENU_ID_SENTENCE_CASE:
       selectedText = toSentenceCase(selectedText)

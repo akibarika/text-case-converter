@@ -4,6 +4,7 @@ const MENU_ID_UPPER_CASE = "copy-upper-case";
 const MENU_ID_CAMEL_CASE = "copy-camel-case";
 const MENU_ID_SPINAL_CASE = "copy-spinal-case";
 const MENU_ID_SNAKE_CASE = "copy-snake-case";
+const MENU_ID_SEPARATOR = "converter-separator"
 
 chrome.runtime.onInstalled.addListener(() => {
   addMenuEntry()
@@ -30,6 +31,11 @@ const addMenuEntry = () => {
     id: MENU_ID_UPPER_CASE,
     title: "Copy as UPPER CASE",
     contexts: ['selection'],
+  });
+  chrome.contextMenus.create({
+    type: "separator",
+    id: MENU_ID_SEPARATOR,
+    contexts: ["selection"]
   });
   chrome.contextMenus.create({
     id: MENU_ID_CAMEL_CASE,
