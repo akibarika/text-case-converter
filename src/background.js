@@ -10,6 +10,11 @@ chrome.runtime.onInstalled.addListener(() => {
   addMenuEntry()
 });
 
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  sendResponse({status: 'ok'});
+  return true;
+});
+
 chrome.contextMenus.onClicked.addListener((info, tab) => chrome.tabs.sendMessage(tab.id, {
   copy: true,
   id: info.menuItemId,
